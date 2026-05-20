@@ -90,7 +90,9 @@ export class DeepLTranslator implements MTEngine {
                     let json: any = await response.json();
                     resolve(json.translations[0].text);
                 } else {
-                    reject(new Error(response.statusText));
+                    let json: any = await response.json().catch(() => null);
+                    let message: string = json?.message ?? response.statusText;
+                    reject(new Error(message));
                 }
             }).catch((error: Error) => {
                 reject(error);
@@ -119,7 +121,9 @@ export class DeepLTranslator implements MTEngine {
                     }
                     resolve(languages);
                 } else {
-                    reject(new Error(response.status + ': ' + response.statusText));
+                    let json: any = await response.json().catch(() => null);
+                    let message: string = json?.message ?? (response.status + ': ' + response.statusText);
+                    reject(new Error(message));
                 }
             }).catch((error: Error) => {
                 reject(error);
