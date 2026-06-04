@@ -20,6 +20,7 @@ export { GeminiTranslator } from './GeminiTranslator.js';
 export { GoogleTranslator } from './GoogleTranslator.js';
 export { MistralTranslator } from './MistralTranslator.js';
 export { ModernMTTranslator } from './ModernMTTranslator.js';
+export { OllamaTranslator } from './OllamaTranslator.js';
 export type { MTEngine } from './MTEngine.js';
 export { MTMatch } from './MTMatch.js';
 export { MTUtils } from './MTUtils.js';

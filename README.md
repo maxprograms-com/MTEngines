@@ -24,6 +24,10 @@ Interface `MTEngine` provides these methods:
 
 All supported engines implement the `MTEngine` interface. Methods `fixMatch()` and `fixTags()` are only implemented by AI-based engines (`QwenTranslator`, `ChatGPTTranslator`, `AnthropicTranslator`, `MistralTranslator` and `GeminiTranslator`), all other engines throw an error when they are called.
 
+`Ollama` engine allows you to work with locally instaled models served by the [Ollama](https://ollama.com/) platform without sending source text to external servers.
+
+When creating an instance of `OllamaTranslator`, you must pass the URL where Ollama is running (usually `http://localhost:11434`), the name of the model to use and optionally a `think` boolean parameter that when set to `true` can speed up the translation process.
+
 ## Supported Engines
 
 - Alibaba Qwen Models
@@ -34,6 +38,7 @@ All supported engines implement the `MTEngine` interface. Methods `fixMatch()` a
 - Microsoft Azure Translator Text
 - Mistral AI
 - ModernMT
+- Ollama
 - OpenAI ChatGPT
 
 ## Installation
@@ -66,7 +71,7 @@ class TestGoogle {
 new TestGoogle();
 ```
 
-`QwenTranslator`, `ChatGPTTranslator`, `AnthropicTranslator`, `MistralTranslator` and `GeminiTranslator` need that you either indicate the model to use when creating the instance, or set the model to use by calling the `setModel()` method like in the following example:
+`QwenTranslator`, `ChatGPTTranslator`, `AnthropicTranslator`, `MistralTranslator`, `GeminiTranslator` and `Ollama` need that you either indicate the model to use when creating the instance, or set the model to use by calling the `setModel()` method like in the following example:
 
 ```typescript
 import { ChatGPTTranslator } from "mtengines";
@@ -88,7 +93,7 @@ class TestChatGPT {
 new TestChatGPT();
 ```
 
-You can get a list of models supported by `QwenTranslator`, `ChatGPTTranslator`, `AnthropicTranslator`, `MistralTranslator` and `GeminiTranslator` by calling the `getAvailableModels()` method:
+You can get a list of models supported by `QwenTranslator`, `ChatGPTTranslator`, `AnthropicTranslator`, `MistralTranslator`, `OllamaTranslator` and `GeminiTranslator` by calling the `getAvailableModels()` method:
 
 ```typescript
 import { AnthropicTranslator } from "mtengines";
