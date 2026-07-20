@@ -1,7 +1,7 @@
 {
   "name": "mtengines",
   "productName": "MTEngines",
-  "version": "4.14.0",
+  "version": "4.14.1",
   "description": "Machine Translation (MT) library written in TypeScript",
   "type": "module",
   "keywords": [
@@ -50,13 +50,13 @@
     "node": ">=22"
   },
   "devDependencies": {
-    "@types/node": "^24.13.2",
+    "@types/node": "^24.13.3",
     "typescript": "^6.0.3"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.1",
-    "typesbcp47": "1.24.0",
+    "typesbcp47": "1.24.1",
     "typesmatch": "^0.1.0",
-    "typesxml": "2.2.0"
+    "typesxml": "2.2.1"
   }
 }
