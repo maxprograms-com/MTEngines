@@ -1,7 +1,7 @@
 {
   "name": "mtengines",
   "productName": "MTEngines",
-  "version": "4.15.0",
+  "version": "4.16.0",
   "description": "Machine Translation (MT) library written in TypeScript",
   "type": "module",
   "keywords": [
@@ -47,16 +47,16 @@
     "url": "https://github.com/maxprograms-com/MTEngines.git"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "devDependencies": {
-    "@types/node": "^24.13.3",
+    "@types/node": "^24.19.2",
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.122.0",
-    "typesbcp47": "^1.24.5",
+    "@anthropic-ai/sdk": "^1.6.0",
+    "typesbcp47": "^1.26.2",
     "typesmatch": "^0.2.0",
-    "typesxml": "^2.5.0"
+    "typesxml": "^2.9.0"
   }
 }
